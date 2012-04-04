@@ -23,7 +23,7 @@ print "Wrote pid: ", pid, " to PID file at ",pidfile
 def ensureDir(f):
     d = os.path.dirname(f)
     if not os.path.exists(d):
-        print "Creating foder: "+f
+        print "Creating folder: "+f
         os.makedirs(d)
 
 def unzipFileIntoDir(file,dir):
