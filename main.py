@@ -1,7 +1,5 @@
 import os
 import time
-import sys
-import subprocess
 import zipfile
 import pprint
 
@@ -60,7 +58,7 @@ def processFolder(path,folder):
     # until the file size is the same.
 
     while 1:
-        time.sleep(10)
+        time.sleep(60)
         new_folder_size = getFolderSize(full_path)
         if (new_folder_size == folder_size & new_folder_size != 0):
             break

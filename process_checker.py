@@ -16,7 +16,7 @@ def runProgram():
 
 
 while 1:
-    time.sleep(300)
+
     if os.path.isfile(pidfile):
         pid_string = open(pidfile, 'r').read()
         pid_int = int(pid_string)
@@ -28,4 +28,6 @@ while 1:
             runProgram()
     else:
         print "No PID file found."
+
+    time.sleep(300)
 
