@@ -4,7 +4,7 @@ pidfile = "/tmp/filecopier.pid"
 
 def check_pid(pid):
     try: os.kill(pid,0)
-    except OSError,e:
+    except OSError:
         return False
     else:
         return True
@@ -12,11 +12,11 @@ def check_pid(pid):
 def runProgram():
     python_script = "/Processing/scripts/main.py"
     subprocess.Popen(["python",python_script])
-    return;
+    return
 
 
 while 1:
-    time.sleep(30)
+    time.sleep(300)
     if os.path.isfile(pidfile):
         pid_string = open(pidfile, 'r').read()
         pid_int = int(pid_string)
